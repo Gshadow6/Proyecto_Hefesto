@@ -10,7 +10,7 @@ def conversor_longitud(valor, origen, deseada):
     unidades = {'metros': 1, 'kilometros': 1000, 'centimetros': 0.01}
     # Condicion por si no encuentra una unidad en el diccionario
     if origen not in unidades or deseada not in unidades:
-        return "Unidad no válida"
+        return "Elija una unidad valida: metros, kilometros y centimetros"
     # Formula usado para la conversion y el mensaje para mostrar el resultado
     resultado = valor * unidades[origen] / unidades[deseada]
     return f"{valor} {origen} es igual a {resultado} {deseada}"
@@ -34,7 +34,7 @@ def conversor_tiempo(valor, origen, deseada):
     unidades = {'segundos': 1, 'minutos': 60, 'horas': 3600, 'dias': 86400, 'semanas': 604800}
     # Condicion por si no encuentra una unidad en el diccionario
     if origen not in unidades or deseada not in unidades:
-        return "Unidad no válida"
+        return "Elija una unidad valida: segundos': segundos, minutos, horas, dias y semanas"
     # Formula usado para la conversion y el mensaje para mostrar el resultado
     resultado = valor * unidades[origen] / unidades[deseada]
     return f"{valor} {origen} es igual a {resultado:.5f} {deseada}"
@@ -58,7 +58,7 @@ def conversor_velocidad(valor, origen, deseada):
     unidades = {'m/s': 1, 'km/h': 0.27777, 'mph': 0.44704, 'nudos': 0.514444}
     # Condicion por si no encuentra una unidad en el diccionario
     if origen not in unidades or deseada not in unidades:
-        return "Unidad no válida"
+        return "Elija una unidad valida: m/s, km/h, mph y nudos"
     # Formula usado para la conversion y el mensaje para mostrar el resultado
     resultado = valor * unidades[origen] / unidades[deseada]
     return f"{valor} {origen} es igual a {resultado:.3f} {deseada}"
@@ -88,7 +88,7 @@ def switch(opcion):
 
 # Funcion por defecto, por si se elige otro numero en el switch
 def default():
-    return "Solo hay 3 conversores: 1 conversor de logitud, 2 conversor de tiempo o 3 conversor de velocidad"
+    return print("Solo hay 3 conversores: 1 conversor de logitud, 2 conversor de tiempo o 3 conversor de velocidad")
 
 
 # Se pide el numero dependiendo del conversor a usar
