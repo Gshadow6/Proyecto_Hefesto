@@ -34,7 +34,7 @@ def conversor_tiempo(valor, origen, deseada):
     unidades = {'segundos': 1, 'minutos': 60, 'horas': 3600, 'dias': 86400, 'semanas': 604800}
     # Condicion por si no encuentra una unidad en el diccionario
     if origen not in unidades or deseada not in unidades:
-        return "Elija una unidad valida: segundos': segundos, minutos, horas, dias y semanas"
+        return "Elija una unidad valida: segundos: segundos, minutos, horas, dias y semanas"
     # Formula usado para la conversion y el mensaje para mostrar el resultado
     resultado = valor * unidades[origen] / unidades[deseada]
     return f"{valor} {origen} es igual a {resultado:.5f} {deseada}"
@@ -64,6 +64,7 @@ def conversor_velocidad(valor, origen, deseada):
     return f"{valor} {origen} es igual a {resultado:.3f} {deseada}"
 
 
+# Funcion para elegir el conversor de velocidad
 def velocidad():
     # Pide los valores de la funcion, el numero, la unidad origen y unidad deseada
     valor = float(input("Ingrese la velocidad a convertir: "))
